@@ -1,4 +1,4 @@
-package Sistema_Radar;
+package Aula_02;
 
 public class Carro {
     public String placa;

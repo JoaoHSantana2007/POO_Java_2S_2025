@@ -1,4 +1,4 @@
-package calculadora;
+package A_01.calculadora;
 
 public class Calculadora {
 	

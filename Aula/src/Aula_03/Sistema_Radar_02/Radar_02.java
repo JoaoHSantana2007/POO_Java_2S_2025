@@ -1,8 +1,10 @@
-package sistema_radar;
+package Aula_03.Sistema_Radar_02;
 
-public class Radar {
-    
-    private String localizacao;
+import Sistema_Radar.Carro;
+
+public class Radar_02 {
+
+	private String localizacao;
     private Integer limiteVelocidade;
 
     public Radar(String localizacao, Integer limiteVelocidade){

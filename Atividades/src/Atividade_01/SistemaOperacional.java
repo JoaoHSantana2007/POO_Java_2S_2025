@@ -1,3 +1,4 @@
+package Atividade_01;
 
 public class SistemaOperacional {
 
@@ -19,7 +20,7 @@ public class SistemaOperacional {
 
         double tempoDeExec = (double) p.getQuantOp() / (computador.getOpPorSec() * computador.getNucleos());
 
-        System.out.println("Programa executado com sucesso");
+        System.out.println("Atividade_01.Programa executado com sucesso");
         System.out.printf("Tempo de exxecucao = %.2f segundos%n", tempoDeExec);
 
         return true;

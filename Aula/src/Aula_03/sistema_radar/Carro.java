@@ -1,7 +1,6 @@
-package Sistema_Radar_02;
+package Aula_03.sistema_radar;
 
-public class Carro_02 {
-
+public class Carro {
    private String placa;
    private Integer velocidade;
    private Integer ano;
@@ -39,4 +38,3 @@ public class Carro_02 {
    }
    
 }
-

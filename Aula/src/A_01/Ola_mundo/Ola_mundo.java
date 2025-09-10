@@ -1,4 +1,4 @@
-package Ola_mundo;
+package A_01.Ola_mundo;
 
 import javax.swing.JOptionPane;
 
