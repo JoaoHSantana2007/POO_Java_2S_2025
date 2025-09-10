@@ -1,23 +1,45 @@
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-	
-		Computador PC = new Computador(16, 1000, 8, 3.5);
+
+        Scanner pc = new Scanner(System.in);
+
+        System.out.println("--- Informacoes do PC ---");
+        System.out.println("Informe RAM do PC em GB");
+        int ram = pc.nextInt();
+
+        System.out.println("Inforeme o armazenamento do PC em GB");
+        int ssd = pc.nextInt();
+
+        System.out.println("Informe os nucleos do PC");
+        int nucleos = pc.nextInt();
+
+        System.out.println("Informe a quantidade de operacoes por segundo(EX: 1,80) do PC");
+        double opPorSec = pc.nextDouble();
+
+		Computador PC = new Computador(ram, ssd, nucleos, opPorSec);
 
         SistemaOperacional SO = new SistemaOperacional(PC);
 
-        Programa prog1 = new Programa(10, 50,4, 200);
+        System.out.println();
+        System.out.println("--- Analizando Programas ---");
+        System.out.println();
+
+        Programa prog1 = new Programa(8, 500,4, 200);
         SO.executarPrograma(prog1);
         System.out.println();
 
-        Programa prog2 = new Programa(8, 1200,6, 2000);
+        Programa prog2 = new Programa(16, 1000,6, 2000);
         SO.executarPrograma(prog2);
         System.out.println();
 
-        Programa prog3 = new Programa(20, 140,8, 20000);
+        Programa prog3 = new Programa(32, 2000,8, 20000);
         SO.executarPrograma(prog3);
         System.out.println();
+
+        pc.close();
 	}
 
 }
