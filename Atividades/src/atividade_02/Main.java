@@ -1,12 +1,4 @@
-package atividade_02.aplicacao;
-
-import atividade_02.entidades.pessoa.Pessoa;
-import atividade_02.entidades.pessoa.Usuario;
-import atividade_02.entidades.pessoa.Funcionario;
-import atividade_02.entidades.Emprestimo.Emprestimo;
-import atividade_02.entidades.material.Material;
-import atividade_02.entidades.material.Livro;
-import atividade_02.entidades.material.Revista;
+package atividade_02;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -18,6 +10,14 @@ public class Main {
         ArrayList<Pessoa> pessoas = new ArrayList<>();
         ArrayList<Material> materiais = new ArrayList<>();
         ArrayList<Emprestimo> emprestimos = new ArrayList<>();
+
+
+        // Exemplo Fixo
+        Instituicao UCB = new Instituicao("UCB", "123456", "Brasilia-DF");
+        Colecao c1 = new Colecao("Pedro", 10);
+        Emprestimo e1 = new Emprestimo(UCB, c1, "20/10/2025", "21/10/2025");
+        emprestimos.add(e1);
+
 
         int opcao;
 
@@ -87,6 +87,7 @@ public class Main {
                     int anoR = sc.nextInt();
                     System.out.print("Edição: ");
                     int edicao = sc.nextInt();
+                    sc.nextLine();
                     materiais.add(new Revista(tituloR, anoR, edicao));
                     System.out.println("Revista cadastrada!\n");
                     break;
@@ -105,8 +106,8 @@ public class Main {
                         break;
                     }
                     System.out.println("Escolha o usuário (índice):");
-                    for (int i = 0; i < pessoas.size(); i++) {
-                        System.out.println(i + " - " + pessoas.get(i).getNome());
+                    for (int i = 0; i < pessoas.size(); i++) { 
+                            System.out.println(i + " - " + pessoas.get(i).getNome());
                     }
                     int idxUsuario = sc.nextInt();
                     sc.nextLine();
@@ -123,7 +124,9 @@ public class Main {
                     System.out.print("Data de devolução: ");
                     String dataD = sc.nextLine();
 
-                    emprestimos.add(new Emprestimo(pessoas.get(idxUsuario), materiais.get(idxMaterial), dataE, dataD));
+                    emprestimos.add(new Emprestimo(pessoas.get(idxUsuario),
+                                                   materiais.get(idxMaterial),
+                                                   dataE, dataD));
                     System.out.println("Empréstimo cadastrado!\n");
                     break;
 
@@ -148,4 +151,3 @@ public class Main {
         sc.close();
     }
 }
-

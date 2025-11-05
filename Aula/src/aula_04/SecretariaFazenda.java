@@ -1,14 +1,10 @@
 package aula_04;
 
 public class SecretariaFazenda {
-
     public static void main(String[] args) {
+        Municipio municipio = new Municipio("Brasília", "DF", 31.5);
+        Apartamento apt = new Apartamento(municipio, 63.0, 0, true);
 
-        Municipio brasilia = new Municipio("Brasilia", "DF", 65.5);
-
-        Apartamento apt = new Apartamento("Brasilia", 52.0, 1, true);
-
-        System.out.println("IPTU = R$" + apt.calcularIPTU());
+        System.out.println("IPTU R$: " + apt.calcularIPTU());
     }
-
 }

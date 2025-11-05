@@ -1,6 +1,6 @@
-package atividade_02.entidades.pessoa;
+package atividade_02;
 
-public abstract class Pessoa {
+public abstract class Pessoa implements TomadorEmprestimo {
     private String nome;
     private String email;
 
@@ -14,6 +14,7 @@ public abstract class Pessoa {
     public String getNome() {
         return this.nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -21,9 +22,9 @@ public abstract class Pessoa {
     public String getEmail() {
         return this.email;
     }
+
     public void setEmail(String email) {
         this.email = email;
     }
 
 }
-

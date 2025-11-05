@@ -1,6 +1,6 @@
-package atividade_02.entidades.material;
+package atividade_02;
 
-public abstract class Material {
+public abstract class Material implements ItemEmprestavel{
     private String titulo;
     private Integer anoPublicacao;
 
@@ -14,6 +14,7 @@ public abstract class Material {
     public String getTitulo() {
         return this.titulo;
     }
+
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
@@ -21,6 +22,7 @@ public abstract class Material {
     public Integer getAnoPublicacao() {
         return this.anoPublicacao;
     }
+
     public void setAnoPublicacao(Integer anoPublicacao) {
         this.anoPublicacao = anoPublicacao;
     }

@@ -1,11 +1,19 @@
 package aula_04;
 
 public class Chacara extends Imovel{
+    private Boolean possuiPocoArtesiano;
 
-    private Boolean possuiPossoArtesiano;
-
-    public Chacara(Municipio municipio, Double areaM2, Integer vagas, boolean possuiPossoArtesiano) {
+    public Chacara(Municipio municipio, Double areaM2, Integer vagas, Boolean possuiPocoArtesiano) {
         super(municipio, areaM2, vagas);
-        this.possuiPossoArtesiano = possuiPossoArtesiano;
+        this.possuiPocoArtesiano = possuiPocoArtesiano;
     }
+
+    public Boolean getPossuiPocoArtesiano() {
+        return this.possuiPocoArtesiano;
+    }
+
+    public void setPossuiPocoArtesiano(Boolean possuiPocoArtesiano) {
+        this.possuiPocoArtesiano = possuiPocoArtesiano;
+    }
+
 }

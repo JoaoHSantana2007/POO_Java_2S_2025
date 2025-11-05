@@ -1,10 +1,8 @@
 package aula_03.sistema_radar_02;
 
-import Sistema_Radar.Carro;
-
-public class Radar_02 {
-
-	private String localizacao;
+public class Radar {
+    
+    private String localizacao;
     private Integer limiteVelocidade;
 
     public Radar(String localizacao, Integer limiteVelocidade){
@@ -12,7 +10,19 @@ public class Radar_02 {
         this.limiteVelocidade = limiteVelocidade;
     }
 
-    public Radar(Integer limiteVelocidade){
+    public String getLocalizacao(){
+        return this.localizacao;
+    }
+
+    public void setLocalizacao(String localizacao){
+        this.localizacao = localizacao;
+    }
+
+    public Integer getLimiteVelocidade(){
+        return this.limiteVelocidade;
+    }
+
+    public void setLimiteVelocidade(Integer limiteVelocidade){
         this.limiteVelocidade = limiteVelocidade;
     }
 
