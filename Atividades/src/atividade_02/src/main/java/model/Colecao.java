@@ -1,4 +1,6 @@
-package atividade_02;
+package atividade_02.src.main.java.model;
+
+import atividade_02.src.main.java.interfaces.ItemEmprestavel;
 
 public class Colecao implements ItemEmprestavel {
     private String proprietario;
